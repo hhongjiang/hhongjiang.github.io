@@ -1,4 +1,3 @@
-/* (c) IGOR KOWALCZYK. All rights reserved. */
 
 :root {
 --primary: #ddd;
@@ -110,7 +109,7 @@ opacity: 1;
 
 @font-face {
 font-family: 'Roboto-Thin';
-src: url(https://igorkowalczyk.github.io/lib/fonts/roboto-thin.otf);
+src: url(https://hhongjiang.github.io/lib/fonts/roboto-thin.otf);
 }
 
 .nav {
@@ -322,7 +321,7 @@ background-repeat: no-repeat;
 text-align: center;
 background-attachment: fixed;
 background-position: center;
-background-image: url(https://igorkowalczyk.github.io/lib/pics/background.jpg);
+background-image: url(https://hhongjiang.github.io/lib/pics/background.jpg);
 width: 100%;
 height: 100vh;
 color: var(--light);
@@ -440,42 +439,42 @@ font-size: 50px;
 
 .card-1 {
 grid-area: one;
-background-image: url('https://igorkowalczyk.github.io/lib/pics/blog.jpg');
+background-image: url('https://hhongjiang.github.io/lib/pics/blog.jpg');
 background-repeat: no-repeat;
 background-size: cover;
 }
 
 .card-2 {
 grid-area: two;
-background-image: url('https://igorkowalczyk.github.io/lib/pics/color-picker.jpg');
+background-image: url('https://hhongjiang.github.io/lib/pics/color-picker.jpg');
 background-repeat: no-repeat;
 background-size: cover;
 }
 
 .card-3 {
 grid-area: three;
-background-image: url('https://igorkowalczyk.github.io/lib/pics/portfolio.jpg');
+background-image: url('https://hhongjiang.github.io/lib/pics/portfolio.jpg');
 background-repeat: no-repeat;
 background-size: cover;
 }
 
 .card-4 {
 grid-area: one;
-background-image: url('https://igorkowalczyk.github.io/lib/pics/day-cycle.jpg');
+background-image: url('https://hhongjiang.github.io/lib/pics/day-cycle.jpg');
 background-repeat: no-repeat;
 background-size: cover;
 }
 
 .card-5 {
 grid-area: two;
-background-image: url('https://igorkowalczyk.github.io/lib/pics/txt.jpg');
+background-image: url('https://hhongjiang.github.io/lib/pics/txt.jpg');
 background-repeat: no-repeat;
 background-size: cover;
 }
 
 .card-6 {
 grid-area: three;
-background-image: url('https://igorkowalczyk.github.io/lib/pics/fest.jpg');
+background-image: url('https://hhongjiang.github.io/lib/pics/fest.jpg');
 background-repeat: no-repeat;
 background-size: cover;
 }
