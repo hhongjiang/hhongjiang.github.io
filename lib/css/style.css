@@ -330,11 +330,11 @@ background-size: cover;
 
 @media screen and (max-width: 500px) {
 .hero-title {
-font-size: 30px !important;
+font-size: 50px !important;
 }
 
 .hero-title2 {
-font-size: 20px !important;
+font-size: 40px !important;
 }
 
 .section-title {
@@ -351,14 +351,14 @@ margin-left: auto;
 }
 
 .hero-title {
-font-size: 54px;
+font-size: 74px;
 margin-bottom: 0.3em;
 transition: 500ms all;
 color: #fff;
 }
 
 .hero-title2 {
-font-size: 30px;
+font-size: 50px;
 transition: 500ms all;
 color: #fff;
 }

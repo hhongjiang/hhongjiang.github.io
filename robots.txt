@@ -3,4 +3,4 @@ Allow: .js
 Allow: .css
 Allow: /lib/
 Disallow:
-Sitemap: https://igorkowalczyk.github.io/sitemap.xml
+Sitemap: https://hhongjiang.github.io/sitemap.xml
