@@ -664,3 +664,5 @@ border-radius: 34px;
 .slider.round:before, .slider-switch.round:before {
 border-radius: 50%;
 }
+
+html { scroll-behavior: smooth; } 
