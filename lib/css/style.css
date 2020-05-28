@@ -439,7 +439,7 @@ font-size: 50px;
 
 .card-1 {
 grid-area: one;
-background-image: url('https://github.com/hhongjiang/hhongjiang.github.io/blob/master/lib/pics/anomaly_detection.jpg');
+background-image: url('https://hhongjiang.github.io/lib/pics/anomaly_detection.jpg');
 background-repeat: no-repeat;
 background-size: cover;
 }
