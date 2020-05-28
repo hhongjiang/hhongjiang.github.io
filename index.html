@@ -20,7 +20,7 @@
 <input class="menu-btn" type="checkbox" id="menu-btn" />
 <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
 <ul class="menu">
-<li><a href="#jumping">Feature Work</a></li>
+<li onclick="myFunction()"><a>Feature Work</a></li>
 <li><a target="_blank" href="https://github.com/hhongjiang" rel="noopener">Github</a></li>
 </ul>
 </nav>
@@ -42,9 +42,9 @@
 </div>
 </div>
 </section>
-<section class="work-section" id="jumping">
+<section class="work-section">
 <div class="section-title">
-<p>Featured Work</p>
+<p id="content">Featured Work</p>
 </div>
 <div class="work-grid">
 <div class="card-1 work-card-2">
@@ -86,5 +86,11 @@
 </footer>
 </main>
 <script src="https://hhongjiang.github.io/lib/js/index.min.js"></script>
+<script>
+function myFunction() {
+  var elmnt = document.getElementById("content");
+  elmnt.scrollIntoView();
+}
+</script>
 </body>
 </html>
