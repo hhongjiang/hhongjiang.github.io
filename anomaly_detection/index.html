@@ -1,73 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
+<title>Basic Static Website</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#fff">
-<meta name="description" content="Hong Jiang personal website.">
-<meta name="google-site-verification" content="-wuCsk4qLolXEPSUTGX7YBxywcyNNf5HS2ClzgEWxNY">
-<title>Hong Jiang</title>
-<link rel="shortcut icon" href="https://hhongjiang.github.io/lib/favicon/favicon.jpg">
-<link rel="stylesheet" href="https://hhongjiang.github.io/anomaly_detection/lib/css/style.min.css">
-</head>
-<body ondragstart="return false" ondrag="return false">
-<script type="text/javascript">var preload = document.createElement('div'); preload.className = "preloader"; preload.innerHTML = '</div><div class="spinner"></div>'; document.body.appendChild(preload); window.addEventListener('load', function() { preload.className +=  ' fade'; setTimeout(function(){ preload.style.display = 'none'; },500); })</script>
-<noscript><div class="no-js">To view the page please enable javascript in your browser.</div></noscript>
+<link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css" />
 
-<section class="home">
-<ul class="post-list">
-{% for post in paginator.posts %}
-<li class="post-list-item">
-<header>
-<h3 >
-<a href="/anomaly_detection/{{ post.url }}">{{ post.title }}</a>
-</h3>
-<time datetime="{{ post.date | date_to_xmlschema }}">{% assign m = post.date | date: "%-m" %}
-{{ post.date | date: "%-d" }}
-{% case m %}
-{% when '1' %}Stycznia
-{% when '2' %}Lutego
-{% when '3' %}Marca
-{% when '4' %}Kwietnia
-{% when '5' %}Maja
-{% when '6' %}Czerwca
-{% when '7' %}Lipca
-{% when '8' %}Sierpnia
-{% when '9' %}Września
-{% when '10' %}Października
-{% when '11' %}Listopada
-{% when '12' %}Grudnia
-{% endcase %}
-{{ post.date | date: "%Y" }}
-</time> 
-<ul class="cat">Kategorie:&nbsp;
-<span>
-{% for category in post.categories %}
-<a href="/anomaly_detection/categories/{{ category }}">{{ category }}</a>&nbsp;
-{% endfor %}
-</span>
-</ul>
-</header>
-<div class="post-list-item-desc">
-<p>{{ post.excerpt | default: '' | strip_html | normalize_whitespace | truncate: 200 | escape }}
-<a href="/anomaly_detection{{ /post.url }}"> Czytaj więcej</a>
-</p>
-</div>
-</li>
-{% endfor %}
-</ul>
-<div class="pagination">
-{% if paginator.previous_page %}
-<a href="/anomaly_detection{{ paginator.previous_page_path }}" class="previous">Poprzednia Strona</a>
-{% endif %}
-<span class="page-number">Strona: {{ paginator.page }} / {{ paginator.total_pages }}</span>
-{% if paginator.next_page %}
-<a href="/anomaly_detection{{ paginator.next_page_path }}" class="next">Następna Strona</a>
-{% endif %}
-</div>
-<a href="{{"/feeds/feed.xml " | relative_url }}" style="line-height:2em">
-<svg width="1.5em" style="vertical-align: middle; margin-bottom: 5px;" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><title></title><circle cx="21" cy="43" r="5"></circle><path d="M35,48.5A2.5,2.5,0,0,1,32.5,46,13.515,13.515,0,0,0,19,32.5a2.5,2.5,0,0,1,0-5A18.521,18.521,0,0,1,37.5,46,2.5,2.5,0,0,1,35,48.5Z"></path><path d="M45,48.5A2.5,2.5,0,0,1,42.5,46,23.527,23.527,0,0,0,19,22.5a2.5,2.5,0,0,1,0-5A28.532,28.532,0,0,1,47.5,46,2.5,2.5,0,0,1,45,48.5Z"></path></svg>
-Subskrybuj posty
-</a>
-</section>
+<body class="pa3 pa5-ns sans-serif lh-copy bt bw2 b--gold black-80">
+    <main>
+        <div class="mw7 center">
+            <header class="flex flex-column flex-row-ns items-center tc tl-ns">
+                <div class="w-100 w-70-ns">
+                    <h1 class="f2">New Title</h1>
+                    <p class="f4">This is a simple one-page website.</p>
+                </div>
+                <div class="w-100 w-30-ns tr">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="76" height="76" style="fill: rgba(0,0,0,.8)">
+                        <path class="heroicon-ui" d="M20.59 12l-3.3-3.3a1 1 0 1 1 1.42-1.4l4 4a1 1 0 0 1 0 1.4l-4 4a1 1 0 0 1-1.42-1.4l3.3-3.3zM3.4 12l3.3 3.3a1 1 0 0 1-1.42 1.4l-4-4a1 1 0 0 1 0-1.4l4-4a1 1 0 0 1 1.42 1.4L3.4 12zm7.56 8.24a1 1 0 0 1-1.94-.48l4-16a1 1 0 1 1 1.94.48l-4 16z"
+                        />
+                    </svg>
+                </div>
+            </header>
+            <article>
+                <p class="tj bl bw1 b--gold pl2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium non turpis et scelerisque. Vestibulum
+                    condimentum sem vitae efficitur auctor. Quisque a enim id augue iaculis laoreet. Vivamus tincidunt erat
+                    ut orci aliquet, in scelerisque ante semper. Aenean ac porta lectus. Nullam rutrum purus et risus sagittis,
+                    id elementum arcu maximus. Donec at lectus at augue blandit mollis sit amet hendrerit orci. Morbi a porttitor
+                    arcu, vel volutpat enim.</p>
+            </article>
+        </div>
+    </main>
+</body>
+
 </html>
