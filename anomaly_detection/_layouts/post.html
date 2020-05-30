@@ -1,0 +1,54 @@
+﻿---
+layout: default
+---
+{% capture post_slug %}{{ page.title | slugify: "latin" }}{% endcapture %}
+<article class="post">
+<header class="post-header">
+<h2 class="post-title" >{{ page.title | escape }}</h2>
+<p class="post-meta">
+{% include time.html %}
+<span class="bullet" aria-hidden="true">&bull;</span> {{ page.author }} <span class="bullet" aria-hidden="true">&bull;</span> {% include reading-time.html %}
+<ul class="cat">Kategorie:&nbsp;
+<span>
+{% for category in page.categories %}
+<a href="/blog/categories/{{ category }}">{{ category }}</a>&nbsp;
+{% endfor %}
+</span>
+</ul>
+</p>
+</header>
+<section class="post-content">
+{{ content }}
+</section>
+<br>
+<hr>
+<br>
+{% include comments.html %}
+<br>
+<hr>
+<br>
+<div class="post-nav">
+{% if page.previous.url %}
+<li><a class="prev" href="/blog{{page.previous.url}}">< Poprzedni post</a></li>
+{% endif %}
+{% if page.next.url %}
+<li><a class="next" href="/blog{{page.next.url}}">Następny post ></a></li>
+{% endif %}
+</div>
+<div class="post-recent">
+<h3>Polecane posty:</h3>
+<ul>
+{% assign posts = site.posts | where_exp:"post", "post.url != page.url" | sample: 2 %}
+{% for post in posts %}
+<li>
+<a href="/blog{{ post.url | prepend: site.baseurl }}" target="_blank">
+<div>
+<div class="post-related-title">{{ post.title }}</div>
+<p class="post-summary">{{post.content | markdownify | strip_html | truncatewords: 15}}</p>
+</div>
+</a>
+</li>
+{% endfor %}
+</ul>
+</div>
+</article>
