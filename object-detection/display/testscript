@@ -1,0 +1,12 @@
+# loop opencv-people-counter through compressed videos
+
+for dir in ~/Videos/result/*
+do
+    for file in $dir/*
+    do
+        echo $file >> record.txt
+        python people_counter.py --prototxt mobilenet_ssd/MobileNetSSD_deploy.prototxt \
+        --model mobilenet_ssd/MobileNetSSD_deploy.caffemodel \
+        --input $file --skip-frames 15
+done
+done
