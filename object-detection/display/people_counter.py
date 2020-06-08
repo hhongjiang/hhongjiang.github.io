@@ -10,8 +10,8 @@
 #	--output output/webcam_output.avi
 
 # import the necessary packages
-from pyimagesearch.centroidtracker import CentroidTracker
-from pyimagesearch.trackableobject import TrackableObject
+from tracking.centroidtracker import CentroidTracker
+from tracking.trackableobject import TrackableObject
 from imutils.video import VideoStream
 from imutils.video import FPS
 import numpy as np

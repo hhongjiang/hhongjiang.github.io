@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <center>
-  <img src="java-project.jpg" style="width:auto;">
+  <img src="object-detection.jpg" style="width:auto;">
  </center>
-<title>Fun: A Starbucks that Free of Producer / Consumer Problem</title>
+<title>Object Detection with SSD on Security Footage under Lossy Compression</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="tachyons.min.css"/>
 
@@ -12,8 +12,8 @@
         <div class="mw7 center">
             <header class="flex flex-column flex-row-ns items-center tc tl-ns">
                 <div class="w-100 w-70-ns">
-                    <h1 class="f2">Fun: A Starbucks that Free of Producer / Consumer Problem</h1>
-                    <p class="f4">Creating an orderly Java "Starbucks" that works forever</p>
+                    <h1 class="f2">Object Detection with SSD on Security Footage under Lossy Compression</h1>
+                    <p class="f4">Build a People Counter in Compressed Videos: SSD for Detection and Centroid Tracking Algorithm</p>
                 </div>
                 <div class="w-100 w-30-ns tr">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="76" height="76" style="fill: rgba(0,0,0,.8)">
@@ -24,19 +24,20 @@
             </header>
             <article>
                 <p class="tj bl bw1 b--gold pl2">
+                    This is a brief introduction of part of my work while working as Research Assistant in <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1828576">REIP</a> project in NYU Center for Urban Science and Progress (CUSP), supervised by Dr. Charlie Mydlarz and Dr. Juan Bello. <br/>
                     <br/>
-                    This is a fun project of avoiding the classic "Producer / Consumer" problem when multiple threads need to share the same resource. <br/>
+                    As we know, video data can occupy large amount of sensor storage if stored locally, but transmitting back to the server is limited by bandwidth and network condition. Codec can be used to reduce the size, but at some point it starts to have negative effect on video quality, thus limit our ability to perform further analysis like machine learning experiments, typically object detection to obtain useful information.<br/>
+                    <br/> 
+                    The object detection pipeline here is a demo built in the process of testing the optimal video codec setting between data compression and analysis capacity. We built a people counter based on this wonderful <a href="https://www.pyimagesearch.com/2018/08/13/opencv-people-counter/">post</a> to intuitively reflect the analysis capacity. This pipeline could detect people in the footage, as well as tracking their position and counting the total number. The structure on our pipeline is shown as follows:<br/>
                     <br/>
-                    "Producer / Consumer" problem means there’s a producer and a consumer sharing a fixed sized buffer. The job of the producer is to create data to put into the buffer. The job of the consumer is to remove data from the buffer. The problem is to ensure the producer does not put data into a full buffer and the consumer does not try to remove data from an empty buffer.<br/>
-                    <br/>
-                    In this project, we create an orderly Starbucks with the implementation of interface <i>Customer</i> and <i>Barista</i>, which act as producer and consumer. Here we use Java Semaphore to avoid <i>Customer</i> implementation adds order into a full quene, or <i>Barista</i> removes order from an empty quene, as well as these actions don't happen at the same time. <br/>
-                    <br/>
-                    By avoiding "Producer / Consumer" problem, our <i>Starbucks</i> can run forever. The source code can be viewed <a href="https://github.com/hhongjiang/hhongjiang.github.io/tree/master/java-project/display">here</a>.<br/>
-                    <br/>
-                    Here is part fo the screen recording of the program running:<br/>
+                    <img src="structure.jpg">
                     <br/>
                     <br/>
-                    <img src="java-project.gif">
+                    The <i>tracking</i> directory contains the centroid tracking algorithm, while <i>mobilenet_ssd</i> has the <a href="https://github.com/chuanqi305/ssd">Caffe</a> framework for SSD in order to achieve the ability of real-time detection. The source code can be viewed <a href="https://github.com/hhongjiang/hhongjiang.github.io/tree/master/object-detection/display">here</a>. As you can see from the demo below, compression does damage the accuracy of object detection.<br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <img src="object-detection.gif">
 
 
  
