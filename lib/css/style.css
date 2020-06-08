@@ -411,7 +411,7 @@ transition: var(--transition);
 display: grid;
 background: var(--gradient);
 border-radius: 10px;
-color: #fff;
+color: #000;
 cursor: pointer;
 font-size: 20px;
 text-align: left;
