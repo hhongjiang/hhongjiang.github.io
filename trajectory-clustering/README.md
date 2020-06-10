@@ -18,7 +18,7 @@ I also discussed the limitation of the designated appoarches in this challenge. 
 <br/>
 Additionally, In this task we basicly rely on Euclidean distances to measure the similarity. However, this method strictly calculate the distance in each checkpoints. Thus it's very sensitive to noise. <br/>
 ## Alternatives
-More reasonale choices include:<br/>
+More reasonale clustering algorithm include:<br/>
 <br/>
 - Partiion trajectories into sub-trajecotries, and each of them is represented by a Minimum Bounding Rectangle(MBR), which is an expression of the maximum extents of a 2-dimensional object. The query processing is then based on these MBRs, instead of scanning data elements of an entire trajectory.(Lee S, Chun S, Kim D, et al.,2000)<br/>
 - Longest common sub-sequence, LCSS.(M. Vlachos, G. Kollios, and D. Gunopulos,2002)<br/>
