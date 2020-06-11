@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<center>
+  <img src="java-project.jpg" style="width:auto;">
+ </center>
+<title>A Starbucks that Free of Producer / Consumer Problem</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="tachyons.min.css"/>
+
+<body class="pa3 pa5-ns sans-serif lh-copy bt bw2 b--gold black-80">
+    <main>
+        <div class="mw7 center">
+            <header class="flex flex-column flex-row-ns items-center tc tl-ns">
+                <div class="w-100 w-70-ns">
+                    <h1 class="f2">A Starbucks that Free of Producer / Consumer Problem</h1>
+                    <p class="f4">Creating an orderly Java "Starbucks" that works forever</p>
+                </div>
+                <div class="w-100 w-30-ns tr">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="76" height="76" style="fill: rgba(0,0,0,.8)">
+                        <path class="heroicon-ui" d="M20.59 12l-3.3-3.3a1 1 0 1 1 1.42-1.4l4 4a1 1 0 0 1 0 1.4l-4 4a1 1 0 0 1-1.42-1.4l3.3-3.3zM3.4 12l3.3 3.3a1 1 0 0 1-1.42 1.4l-4-4a1 1 0 0 1 0-1.4l4-4a1 1 0 0 1 1.42 1.4L3.4 12zm7.56 8.24a1 1 0 0 1-1.94-.48l4-16a1 1 0 1 1 1.94.48l-4 16z"
+                        />
+                    </svg>
+                </div>
+            </header>
+            <article>
+                <p class="tj bl bw1 b--gold pl2">
+                    <br/>
+                    This is a fun project of avoiding the classic "Producer / Consumer" problem when multiple threads need to share the same resource. <br/>
+                    <br/>
+                    "Producer / Consumer" problem means there’s a producer and a consumer sharing a fixed sized buffer. The job of the producer is to create data to put into the buffer. The job of the consumer is to remove data from the buffer. The problem is to ensure the producer does not put data into a full buffer and the consumer does not try to remove data from an empty buffer.<br/>
+                    <br/>
+                    In this project, we create an orderly Starbucks with the implementation of interface <i>Customer</i> and <i>Barista</i>, which act as producer and consumer. Here we use Java Semaphore to avoid <i>Customer</i> implementation adds order into a full quene, or <i>Barista</i> removes order from an empty quene, as well as these actions don't happen at the same time. <br/>
+                    <br/>
+                    By avoiding "Producer / Consumer" problem, our <i>Starbucks</i> can run forever. The source code can be viewed <a href="https://github.com/hhongjiang/hhongjiang.github.io/tree/master/java-project/display">here</a>.<br/>
+                    <br/>
+                    Here is part fo the screen recording of the program running:<br/>
+                    <br/>
+                    <br/>
+                    <img src="java-project.gif">
+
+
+ 
+
+                    
+                </p>
+            </article>
+        </div>
+    </main>
+</body>
+
+</html>
