@@ -184,7 +184,7 @@ We did this by analyzing the tcpdump capture and find the reaction time using Wi
 <img src="task3-3-wireshark-1.jpg">
 <br/>
 <br/>
-<img src="/img/task3-3-wireshark-2.jpg">
+![task3-3-wireshark-2](img/task3-3-wireshark-2.jpg)
 <br/>
 
 
