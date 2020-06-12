@@ -1,11 +1,12 @@
 # OSPF with FRRouting and Docker Lab Report
+In this report, I documented my process of building OSPF network among Docker containers and performed network experiments and package analysis.
 ## Software Requirement
-In this report, I documented how I built OSPF network and performed network experiments under Ubuntu 16.04 system. The following software suites are used:
-* FRRouting. 
- * [Installation from source]("http://docs.frrouting.org/en/latest/installation.html#from-packages")
- * [Image from cumulusnetworks]("https://hub.docker.com/r/cumulusnetworks/frrouting")
-* Docker containers. 
- * [Installation]("https://docs.docker.com/install/linux/docker-ce/ubuntu/")
+The following software suites are used under Ubuntu 16.04 system:
+* FRRouting
+  * <a href="http://docs.frrouting.org/en/latest/installation.html#from-packages">Installation from source</a>
+  * <a href="https://hub.docker.com/r/cumulusnetworks/frrouting">Image from cumulusnetworks</a>
+* Docker containers
+  * <a href="https://docs.docker.com/install/linux/docker-ce/ubuntu/">Installation</a>
 
 
 ## TASK 1
@@ -13,12 +14,12 @@ Create the following topology and run ospf<br/>
 <br/>
 <img src="topology1.jpg">
 <br/>
-And for each container, show<br/>
+And for each container, show:<br/>
 * ospf neighbors
 * ospf routes
-* ip routes<br/>
-<br/>
-And then, show you can successfully, <br/>
+* ip routes
+
+<br/>And then, show you can successfully:
 * R1 ping R2
 * R4 ping R2
 
@@ -83,12 +84,12 @@ Create the following topology and run ospf with link cost
 <br/>
 <img src="topology2.jpg">
 <br/>
-And for each container, show<br/>
+And for each container, show:<br/>
 * ospf neighbors
 * ospf routes
-* ip routes<br/>
-<br/>
-And then, show you can successfully, <br/>
+* ip routes
+
+<br/>And then, show you can successfully:
 * R1 ping R2
 * R4 ping R2
 
@@ -185,7 +186,7 @@ We did this by analyzing the tcpdump capture and find the reaction time using Wi
 <br/>
 <br/>
 ![task3-3-wireshark-2](img/task3-3-wireshark-2.jpg)
-<br/>
+
 
 
 
