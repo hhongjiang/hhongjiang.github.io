@@ -174,7 +174,7 @@ We did this by analyzing the tcpdump capture and find the reaction time using Wi
 <img src="task3-2-wireshark-2.jpg">
 <br/>
 ### TASK3 - PART 3
-Create the following topology and run ospf. Then break another link R3-R2 and repeat the same analysis
+Create the follsowing topology and run ospf. Then break another link R3-R2 and repeat the same analysis
 <br/>
 <img src="topology3-3.jpg">
 <br/>
@@ -184,7 +184,7 @@ We did this by analyzing the tcpdump capture and find the reaction time using Wi
 <img src="task3-3-wireshark-1.jpg">
 <br/>
 <br/>
-<img src="./task3-3-wireshark-2.jpg">
+<img src="/img/task3-3-wireshark-2.jpg">
 <br/>
 
 
