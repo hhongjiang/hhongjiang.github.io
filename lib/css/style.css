@@ -472,12 +472,6 @@ background-repeat: no-repeat;
 background-size: cover;
 }
 
-.card-6 {
-grid-area: three;
-background-image: url('https://hhongjiang.github.io/lib/pics/fest.jpg');
-background-repeat: no-repeat;
-background-size: cover;
-}
 
 .card-subhead {
 font-size: 14px;
